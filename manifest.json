@@ -1,0 +1,9 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Task Manager",
+    "version": "1.0.0",
+    "description": "A Chrome extension for managing student tasks and schedules.",
+    "permissions": ["storage", "alarms", "notifications"],
+    "background": {"service_worker": "background.js"},
+    "action": {"default_popup": "popup.html"}
+}
