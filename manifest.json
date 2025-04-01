@@ -5,5 +5,9 @@
     "description": "A Chrome extension for managing student tasks and schedules.",
     "permissions": ["storage", "alarms", "notifications"],
     "background": {"service_worker": "background.js"},
-    "action": {"default_popup": "popup.html"}
+    "action": {"default_popup": "popup.html"},
+    "host_permissions": [],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
 }
