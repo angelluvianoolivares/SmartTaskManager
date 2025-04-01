@@ -60,3 +60,31 @@ li {
 button {
     cursor: pointer;
 }
+
+.upload {
+    margin: 10px;
+    padding: 5px;
+}
+
+.loading {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.preview {
+    display: block;
+    margin: 10px auto;
+    max-width: 90%;
+    height: auto;
+    border: 1px solid  #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 15px 0;
+}
