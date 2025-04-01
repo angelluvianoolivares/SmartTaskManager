@@ -4,15 +4,30 @@
         <title> Smart Task Manager </title>
         <link rel="stylesheet" href="styles.css">
         <script src="popup.js" defer></script>
+        <script src="tesseract.min.js"></script>
     </head>
     <body>
         <div class="container">
             <h1> Tasks </h1>
-            <label for="folderSelect"> Select Folder </label>
-            <select id="folderSelect"></select>
-            <button id="addFolder" class="btn"> Add Folder </button>
-            <u1 id="taskList"></u1>
+            <div class="folder-selection">
+                <label for="folderSelect"> Select Folder: </label>
+                <select id="folderSelect"></select>
+                <button id="addFolder" class="btn"> Add Folder </button>
+            </div>
+
+            <hr>
+
+            <u1 id="taskList" class="u1"></u1>
             <button id="addTask" class="btn"> Add Task </button>
+
+            <hr>
+
+            <div class="ocr-section">
+                <input type="file" id="imageUpload" class="upload" accept="image/*">
+                <button id="ocrTask" class="btn"> OCR Task </button>
+                <img id="imagePreview" class="preview hidden" alt="Image Preview">
+                <div id="loading" class="loading hidden"> Processing Image... </div>
+            </div>
         </div>
     </body>
 </html>
