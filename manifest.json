@@ -6,8 +6,8 @@
     "permissions": ["storage", "alarms", "notifications"],
     "background": {"service_worker": "background.js"},
     "action": {"default_popup": "popup.html"},
-    "host_permissions": [],
+    "host_permissions": ["https://vision.googleapis.com/*"],
     "content_security_policy": {
-        "extension_pages": "script-src 'self'; object-src 'self'"
+        "extension_pages": "script-src 'self'; object-src 'self';"
     }
 }
