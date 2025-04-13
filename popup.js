@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         }]
                 };
 
-                const apiKey = "AIzaSyCBfJd37RWxSoGqP59unB9pmXu0T2-INnw";
+                const apiKey = "";
                 const response = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`, {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
