@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title> Smart Task Manager </title>
         <link rel="stylesheet" href="styles.css">
         <script src="popup.js" defer></script>
@@ -13,19 +14,46 @@
                 <select id="folderSelect"></select>
                 <button id="addFolder" class="btn"> Add Folder </button>
             </div>
-
+            
             <hr>
-
             <u1 id="taskList" class="u1"></u1>
-            <button id="addTask" class="btn"> Add Task </button>
-
             <hr>
 
-            <div class="ocr-section">
-                <input type="file" id="imageUpload" class="upload" accept="image/*">
+            <div class="bottom-section">
+                <button id="addTask" class="btn"> Add Task </button>
+                <input type="file" id="imageUpload" class="upload" accept="image/*" hidden>
+                <label for="imageUpload" class="btn custom-file-upload"> Choose File </label>
                 <button id="ocrTask" class="btn"> OCR Task </button>
-                <img id="imagePreview" class="preview hidden" alt="Image Preview">
-                <div id="loading" class="loading hidden"> Processing Image... </div>
+            </div>   
+
+            <img id="imagePreview" class="preview hidden" alt="Image Preview">
+            <div id="loading" class="loading hidden"> Processing Image... </div>
+        </div>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2> New Task </h2>
+                <input type="text" id="taskName" placeholder="Task Name" required><br><br>
+
+                <label for="dueDate"> Due Date: </label><br>
+                <input type="date" id="dueDate" required><br><br>
+
+                <label for="dueTime"> Due Time: </label><br>
+                <input type="time" id="dueTime" required><br><br>
+
+                <input type="text" id="taskColor" placeholder="Task Color" required><br><br>
+
+                <label for="priority"> Priority: </label><br>
+                <select id="priority" required>
+                    <option value="High"> High </option>
+                    <option value="Medium"> Medium </option>
+                    <option value="Low"> Low </option>
+                </select><br><br>
+
+                <label><input type="checkbox" id="recurring"> Recurring Daily? </label><br><br>
+
+                <button id="saveTask" class="btn"> Save Task </button>
+                <button id="cancelTask" class="btn"> Cancel </button>
             </div>
         </div>
     </body>
